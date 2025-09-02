@@ -10,8 +10,8 @@ const Features: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
             ),
-            title: 'Analytics & Insights',
-            description: 'Get comprehensive analytics and insights into your business performance with real-time data visualization and detailed reporting.'
+            title: 'Preformance Analytics',
+            description: "Visualize your progress with detailed metrics and identify what's working."
         },
         {
             icon: (
@@ -19,8 +19,8 @@ const Features: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
             ),
-            title: 'Goal Tracking',
-            description: 'Set, track, and achieve your business goals with our intelligent goal tracking system that provides actionable insights and progress monitoring.'
+            title: 'Discipline Building',
+            description: "Develop consistent habits through structured reflection and goal tracking."
         },
         {
             icon: (
@@ -28,8 +28,8 @@ const Features: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
             ),
-            title: 'Smart Automation',
-            description: 'Automate repetitive tasks and streamline your workflow with our intelligent automation tools that learn and adapt to your business needs.'
+            title: 'Pattern Recognition',
+            description: "Spot recurring behaviors and market conditions that impact your results."
         }
     ];
 

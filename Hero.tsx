@@ -9,19 +9,19 @@ const Hero: React.FC = () => {
                 <div className="text-center flex flex-col items-center">
                     {/* Main Heading */}
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 mb-6">
-                        Build Something{' '}
-                        <span className="text-[#015FFC]">Amazing</span>
+                        Become a Confident,{' '}
+                        <span className="text-[#015FFC]">Consistently Profitable </span> Trader
                     </h1>
 
                     {/* Supporting Paragraph */}
                     <p className="text-lg md:text-xl leading-relaxed text-gray-600 max-w-2xl mb-10">
-                        Create stunning websites and applications with our modern development tools.
-                        Join thousands of developers who are already building the future.
+                    Transform your trading with intelligent journaling. Track performance, identify patterns, and build the discipline that separates winners from losers.
+
                     </p>
 
                     {/* CTA Button */}
                     <button className="bg-[#015FFC] text-white px-8 py-3 rounded-md font-medium text-base hover:opacity-90 hover:scale-105 transition-all duration-200">
-                        Get Started Today
+                        Start Free Today
                     </button>
                 </div>
             </div>

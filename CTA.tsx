@@ -9,18 +9,18 @@ const CTA: React.FC = () => {
                 <div className="text-center flex flex-col items-center">
                     {/* Section Heading */}
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                        Ready to Get Started?
+                    Ready to Transform Your Trading?
                     </h2>
 
                     {/* Section Description */}
                     <p className="text-lg text-gray-600 max-w-2xl mb-10">
-                        Join thousands of businesses already using our platform to grow and succeed.
-                        Start your journey today with our powerful tools and expert support.
+                    Join forex and futures traders who've elevated their performance through structured journaling and detailed trade analysis.
+
                     </p>
 
                     {/* CTA Button */}
                     <button className="bg-[#015FFC] text-white px-10 py-4 rounded-md font-medium text-base hover:opacity-90 hover:scale-105 transition-all duration-200">
-                        Start Your Free Trial
+                    Start Journaling Smarter
                     </button>
                 </div>
             </div>

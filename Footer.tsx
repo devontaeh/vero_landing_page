@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
     const footerLinks = [
@@ -42,48 +43,49 @@ const Footer: React.FC = () => {
 
     return (
         <footer className="w-full bg-white border-t border-gray-100">
-            <div className="max-w-6xl mx-auto px-6 lg:px-8 py-12">
-                <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                    {/* Logo and Brand */}
-                    <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
-                            <span className="text-white font-bold text-sm">V</span>
-                        </div>
-                        <span className="text-gray-900 font-medium text-sm">Vero</span>
+            <div className="py-12">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+                    {/* Logo and Brand - positioned at left edge */}
+                    <div className="flex items-center pl-6 lg:pl-8">
+                        <Logo size="sm" showText={true} />
                     </div>
 
-                    {/* Navigation Links */}
-                    <nav className="flex flex-wrap justify-center md:justify-start space-x-6">
-                        {footerLinks.map((link, index) => (
-                            <a
-                                key={index}
-                                href={link.href}
-                                className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
-                            >
-                                {link.name}
-                            </a>
-                        ))}
-                    </nav>
+                    {/* Content container */}
+                    <div className="max-w-6xl mx-auto px-6 lg:px-8 flex-1 flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
 
-                    {/* Social Icons */}
-                    <div className="flex items-center space-x-4">
-                        {socialLinks.map((social, index) => (
-                            <a
-                                key={index}
-                                href={social.href}
-                                className="text-gray-400 hover:text-gray-600 hover:scale-110 transition-all duration-200"
-                                aria-label={social.name}
-                            >
-                                {social.icon}
-                            </a>
-                        ))}
+                        {/* Navigation Links */}
+                        <nav className="flex flex-wrap justify-center md:justify-start space-x-6">
+                            {footerLinks.map((link, index) => (
+                                <a
+                                    key={index}
+                                    href={link.href}
+                                    className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
+                                >
+                                    {link.name}
+                                </a>
+                            ))}
+                        </nav>
+
+                        {/* Social Icons */}
+                        <div className="flex items-center space-x-4">
+                            {socialLinks.map((social, index) => (
+                                <a
+                                    key={index}
+                                    href={social.href}
+                                    className="text-gray-400 hover:text-gray-600 hover:scale-110 transition-all duration-200"
+                                    aria-label={social.name}
+                                >
+                                    {social.icon}
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
                 {/* Copyright */}
                 <div className="mt-8 pt-8 border-t border-gray-100 text-center">
                     <p className="text-sm text-gray-500">
-                        © 2024 Vero. All rights reserved.
+                        © {new Date().getFullYear()} Vero. All rights reserved.
                     </p>
                 </div>
             </div>
