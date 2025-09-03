@@ -3,7 +3,7 @@
 import React from 'react';
 
 interface LogoProps {
-    size?: 'sm' | 'md' | 'lg';
+    size?: 'sm' | 'md' | 'lg' | 'xl';
     showText?: boolean;
     className?: string;
 }
@@ -29,6 +29,11 @@ const Logo: React.FC<LogoProps> = ({
             iconSize: 20,
             textSize: 'text-base',
             gap: 'gap-1.5'
+        },
+        xl: {
+            iconSize: 28,
+            textSize: 'text-lg',
+            gap: 'gap-2'
         }
     };
 

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Logo from './Logo';
+import { scrollToWaitlist } from './src/utils/scrollToWaitlist';
 
 const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -33,12 +34,12 @@ const Header: React.FC = () => {
             <div className="flex justify-between items-center h-14 sm:h-16">
                 {/* Logo - positioned at left edge */}
                 <div className="flex-shrink-0 pl-4 sm:pl-6 lg:pl-8">
-                    <Logo size="md" showText={true} />
+                    <Logo size="xl" showText={false} />
                 </div>
 
                 {/* Navigation Links - Desktop */}
                 <nav className="hidden md:flex space-x-8 flex-1 justify-center">
-                    {navigationLinks.map((link) => (
+                    {/* {navigationLinks.map((link) => (
                         <a
                             key={link.name}
                             href={link.href}
@@ -46,13 +47,16 @@ const Header: React.FC = () => {
                         >
                             {link.name}
                         </a>
-                    ))}
+                    ))} */}
                 </nav>
 
                 {/* CTA Button - positioned at right edge */}
                 <div className="flex items-center space-x-4 pr-4 sm:pr-6 lg:pr-8">
-                    <button className="hidden sm:inline-flex items-center px-4 py-2 sm:px-6 sm:py-2 bg-[#015FFC] text-white text-sm sm:text-base font-medium rounded-lg hover:opacity-90 transition-opacity duration-200">
-                        Get Started
+                    <button
+                        onClick={scrollToWaitlist}
+                        className="hidden sm:inline-flex items-center px-4 py-2 sm:px-6 sm:py-2 bg-[#015FFC] text-white text-sm sm:text-base font-medium rounded-lg hover:opacity-90 transition-opacity duration-200"
+                    >
+                        Join Waitlist
                     </button>
 
                     {/* Mobile Menu Button */}
