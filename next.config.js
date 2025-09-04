@@ -8,9 +8,6 @@ const nextConfig = {
   },
   basePath: isProd ? "/vero_landing_page" : "",
   assetPrefix: isProd ? "/vero_landing_page/" : "",
-  experimental: {
-    appDir: true,
-  },
 };
 
 module.exports = nextConfig;
