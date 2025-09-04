@@ -40,15 +40,18 @@ const Logo: React.FC<LogoProps> = ({
     const config = sizeConfig[size] || sizeConfig.md;
 
     // Your actual SVG logo
-    const LogoIcon = () => (
-        <img
-            src="/logo.svg"
-            alt="Vero Logo"
-            width={config.iconSize}
-            height={config.iconSize}
-            className="object-contain"
-        />
-    );
+    const LogoIcon = () => {
+        const logoSrc = process.env.NODE_ENV === 'production' ? '/vero_landing_page/logo.svg' : '/logo.svg';
+        return (
+            <img
+                src={logoSrc}
+                alt="Vero Logo"
+                width={config.iconSize}
+                height={config.iconSize}
+                className="object-contain"
+            />
+        );
+    };
 
     // Check icon
     const CheckIcon = () => (
