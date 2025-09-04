@@ -42,7 +42,7 @@ const Logo: React.FC<LogoProps> = ({
     // Your actual SVG logo
     const LogoIcon = () => (
         <img
-            src="/logo.svg"
+            src="./logo.svg"
             alt="Vero Logo"
             width={config.iconSize}
             height={config.iconSize}

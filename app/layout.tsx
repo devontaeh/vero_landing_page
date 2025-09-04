@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: 'Vero',
     description: 'Modern landing page built with Next.js and Tailwind CSS',
     icons: {
-        icon: '/logo.svg',
+        icon: './logo.svg',
     },
 }
 
