@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Logo from './Logo';
-import { scrollToWaitlist } from './src/utils/scrollToWaitlist';
+import { scrollToWaitlist } from '../src/utils/scrollToWaitlist';
 
 const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);

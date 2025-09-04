@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from '../Header'
-import Hero from '../Hero'
-import ProductShowcase from '../ProductShowcase'
-import Features from '../Features'
-import CTA from '../CTA'
-import Footer from '../Footer'
+import Header from '../components/Header'
+import Hero from '../components/Hero'
+import ProductShowcase from '../components/ProductShowcase'
+import Features from '../components/Features'
+import CTA from '../components/CTA'
+import Footer from '../components/Footer'
 
 export default function Home() {
     return (

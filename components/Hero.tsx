@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import HeroHeadline from './src/components/hero/HeroHeadline';
-import { scrollToWaitlist } from './src/utils/scrollToWaitlist';
+import HeroHeadline from '../src/components/hero/HeroHeadline';
+import { scrollToWaitlist } from '../src/utils/scrollToWaitlist';
 
 const Hero: React.FC = () => {
     return (

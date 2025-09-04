@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import WaitlistForm from './src/components/WaitlistForm';
+import WaitlistForm from '../src/components/WaitlistForm';
 
 const CTA: React.FC = () => {
     return (
