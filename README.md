@@ -66,15 +66,10 @@ vero_landing_page/
 │   ├── Footer.tsx
 │   ├── Button.tsx
 │   └── Logo.tsx
-├── DESIGN_SYSTEM.md
 ├── package.json
 ├── tailwind.config.js
 └── next.config.js
 ```
-
-## Design System
-
-See `DESIGN_SYSTEM.md` for complete typography, color, spacing, and component specifications.
 
 ## Technologies Used
 
