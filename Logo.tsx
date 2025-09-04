@@ -31,13 +31,13 @@ const Logo: React.FC<LogoProps> = ({
             gap: 'gap-1.5'
         },
         xl: {
-            iconSize: 28,
+            iconSize: 32,
             textSize: 'text-lg',
             gap: 'gap-2'
         }
     };
 
-    const config = sizeConfig[size];
+    const config = sizeConfig[size] || sizeConfig.md;
 
     // Your actual SVG logo
     const LogoIcon = () => (

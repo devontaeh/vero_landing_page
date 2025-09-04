@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-const words = ["Disciplined", "Successful", "Professional", "Consistently Profitable"];
+const words = ["Disciplined", "Successful", "Professional", "Confident", "Fearless", "Calculated", "Consistently Profitable"];
 
 export default function HeroHeadline() {
     const [index, setIndex] = useState(0);

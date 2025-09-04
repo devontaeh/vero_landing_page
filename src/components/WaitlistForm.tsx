@@ -14,6 +14,8 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
     const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
 
+
+
     const validateEmail = (email: string): boolean => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
@@ -41,18 +43,19 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
         try {
             // If Supabase is not configured, simulate success
             if (!supabase) {
-                console.log('Supabase not configured, simulating waitlist signup for:', email);
                 await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
                 setStatus('success');
                 setEmail('');
                 return;
             }
 
+            const emailToInsert = email.trim().toLowerCase();
+
             // Insert email into waitlist table
-            const { error } = await supabase
+            const { data, error } = await supabase
                 .from('waitlist')
                 .insert([
-                    { email: email.trim().toLowerCase() }
+                    { email: emailToInsert }
                 ]);
 
             if (error) {
@@ -68,7 +71,6 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
                 setEmail('');
             }
         } catch (error) {
-            console.error('Waitlist signup error:', error);
             setStatus('error');
             setErrorMessage('Something went wrong. Please try again.');
         } finally {
@@ -77,7 +79,8 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
     };
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setEmail(e.target.value);
+        const newEmail = e.target.value;
+        setEmail(newEmail);
         if (status === 'error') {
             setStatus('idle');
             setErrorMessage('');
@@ -140,7 +143,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
                     disabled={isLoading}
                     aria-label="Join Waitlist"
                     aria-busy={isLoading}
-                    className="flex items-center justify-center gap-2 min-w-[120px] h-[40px] rounded-lg bg-[#015FFC] px-6 text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-[#015FFC] focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed transition-none whitespace-nowrap"
+                    className="flex items-center justify-center gap-2 min-w-[120px] h-[40px] rounded-lg bg-[#015FFC] px-4 text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-[#015FFC] focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed transition-none whitespace-nowrap"
                     style={{
                         transform: 'none',
                         boxShadow: 'none',
@@ -161,7 +164,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
 
     return (
         <div id="waitlist" className={`w-full max-w-md mx-auto ${className}`}>
-            <form onSubmit={handleSubmit} className="space-y-3">
+            <form onSubmit={handleSubmit} className="space-y-4">
                 {renderForm()}
 
                 {/* Success Message */}
@@ -169,7 +172,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
                     <div
                         id="success-message"
                         role="alert"
-                        className="text-sm text-green-600"
+                        className="text-base text-green-600"
                     >
                         <span>You're on the waitlist! 🎉</span>
                     </div>
@@ -180,7 +183,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
                     <div
                         id="error-message"
                         role="alert"
-                        className="text-sm text-red-600"
+                        className="text-base text-red-600"
                     >
                         <span>{errorMessage}</span>
                     </div>
