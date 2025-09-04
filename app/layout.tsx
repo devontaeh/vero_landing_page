@@ -4,9 +4,9 @@ import './globals.css'
 
 export const metadata: Metadata = {
     title: 'Vero',
-    description: 'Modern landing page built with Next.js and Tailwind CSS',
+    description: 'Transform your trading with intelligent journaling. Track performance, identify patterns, and build the discipline that separates winners from losers.',
     icons: {
-        icon: './logo.svg',
+        icon: '/logo.svg',
     },
 }
 
