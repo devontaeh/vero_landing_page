@@ -3,8 +3,11 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-    title: 'Vero - Landing Page',
+    title: 'Vero',
     description: 'Modern landing page built with Next.js and Tailwind CSS',
+    icons: {
+        icon: '/logo.svg',
+    },
 }
 
 export default function RootLayout({

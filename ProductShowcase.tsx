@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { scrollToWaitlist } from './src/utils/scrollToWaitlist';
 
 const ProductShowcase: React.FC = () => {
     const metrics = [
@@ -79,7 +78,6 @@ const ProductShowcase: React.FC = () => {
                                 <p className="text-gray-600">March 2025 • 47 Trading Days</p>
                             </div>
                             <button
-                                onClick={scrollToWaitlist}
                                 className="bg-[#015FFC] text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity duration-200"
                             >
                                 Add Trade
