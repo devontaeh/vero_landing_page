@@ -18,10 +18,11 @@ export default function HeroHeadline() {
     return (
         <h1
             aria-label="Become a Consistently Profitable Trader"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight text-center"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight text-center"
             style={{
-                fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
-                minHeight: 'clamp(2.5rem, 5vw, 3.5rem)',
+                fontSize: 'clamp(1.5rem, 5vw, 3.5rem)',
+                minHeight: 'clamp(2rem, 6vw, 4rem)',
+                lineHeight: '1.1',
             }}
         >
             <span>Become a </span>

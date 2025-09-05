@@ -7,6 +7,12 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Development server configuration
+  ...(process.env.NODE_ENV === "development" && {
+    experimental: {
+      serverComponentsExternalPackages: [],
+    },
+  }),
   // Only use basePath for production builds (GitHub Pages)
   ...(isProd && {
     basePath: "/vero_landing_page",

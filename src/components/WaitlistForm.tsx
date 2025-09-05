@@ -127,7 +127,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
 
         // Beside variant (default)
         return (
-            <div className="flex w-full space-x-4 justify-center">
+            <div className="flex flex-col sm:flex-row w-full space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
                 <input
                     id="email"
                     type="email"
@@ -135,7 +135,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
                     onChange={handleEmailChange}
                     placeholder="Enter your email"
                     disabled={isLoading}
-                    className="w-64 px-4 py-2 text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#015FFC] disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full sm:w-64 px-4 py-2 text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#015FFC] disabled:opacity-50 disabled:cursor-not-allowed"
                     aria-describedby={status === 'error' ? 'error-message' : status === 'success' ? 'success-message' : undefined}
                 />
                 <button
@@ -143,19 +143,11 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
                     disabled={isLoading}
                     aria-label="Join Waitlist"
                     aria-busy={isLoading}
-                    className="flex items-center justify-center gap-2 min-w-[120px] h-[40px] rounded-lg bg-[#015FFC] px-4 text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-[#015FFC] focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed transition-none whitespace-nowrap"
-                    style={{
-                        transform: 'none',
-                        boxShadow: 'none',
-                        border: 'none',
-                        outline: 'none'
-                    }}
+                    className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 bg-[#015FFC] text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity duration-200 disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap"
                 >
-                    <div className="w-4 h-4 flex items-center justify-center">
-                        {isLoading && (
-                            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                        )}
-                    </div>
+                    {isLoading ? (
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                    ) : null}
                     <span>Join Waitlist</span>
                 </button>
             </div>

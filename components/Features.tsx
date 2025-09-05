@@ -34,26 +34,26 @@ const Features: React.FC = () => {
     ];
 
     return (
-        <section className="w-full bg-gray-50 py-20">
-            <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <section className="w-full bg-gray-50 py-12 sm:py-16 md:py-20">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Features Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
                     {features.map((feature, index) => (
                         <div key={index} className="text-center">
                             {/* Icon Container */}
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm hover:shadow-md hover:scale-110 transition-all duration-200 group">
+                            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-sm hover:shadow-md hover:scale-110 transition-all duration-200 group">
                                 <div className="text-[#015FFC] group-hover:scale-110 transition-transform duration-200">
                                     {feature.icon}
                                 </div>
                             </div>
 
                             {/* Feature Title */}
-                            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
                                 {feature.title}
                             </h3>
 
                             {/* Feature Description */}
-                            <p className="text-base leading-relaxed text-gray-600">
+                            <p className="text-sm sm:text-base leading-relaxed text-gray-600">
                                 {feature.description}
                             </p>
                         </div>

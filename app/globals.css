@@ -6,3 +6,84 @@
 body {
     font-family: 'Inter', system-ui, sans-serif;
 }
+
+/* Responsive utilities and mobile optimizations */
+@layer utilities {
+
+    /* Prevent horizontal scroll on mobile */
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Touch-friendly interactions */
+    .touch-manipulation {
+        touch-action: manipulation;
+    }
+
+    /* Smooth scrolling for anchor links */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Better focus states for accessibility */
+    .focus-visible:focus {
+        outline: 2px solid #015FFC;
+        outline-offset: 2px;
+    }
+
+    /* Prevent text size adjustment on mobile */
+    input[type="email"],
+    input[type="text"],
+    textarea {
+        font-size: 16px;
+    }
+
+    @media (max-width: 640px) {
+
+        /* Ensure minimum touch target size */
+        button,
+        a,
+        input,
+        select,
+        textarea {
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        /* Better spacing for mobile */
+        .mobile-spacing {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+}
+
+/* Custom responsive breakpoints for better mobile experience */
+@media (max-width: 320px) {
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+/* Debug mobile viewport issues */
+@media (max-width: 768px) {
+
+    /* Ensure no conflicting JavaScript runs in mobile view */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
