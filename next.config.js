@@ -2,6 +2,8 @@
 const nextConfig = {
   output: "export",
   trailingSlash: true,
+  basePath: "/vero_landing_page",
+  assetPrefix: "/vero_landing_page/",
   images: {
     unoptimized: true,
   },
