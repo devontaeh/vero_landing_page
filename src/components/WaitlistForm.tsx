@@ -127,7 +127,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
 
         // Beside variant (default)
         return (
-            <div className="flex flex-col sm:flex-row w-full space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
+            <div className="flex flex-col sm:flex-row w-full space-y-4 sm:space-y-0 sm:gap-6 justify-center">
                 <input
                     id="email"
                     type="email"
@@ -135,7 +135,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
                     onChange={handleEmailChange}
                     placeholder="Enter your email"
                     disabled={isLoading}
-                    className="w-full sm:w-64 px-4 py-2 text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#015FFC] disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-48 sm:w-36 px-4 py-2 text-base border border-gray-300 rounded-lg focus:outline-none focus:border-[#015FFC] disabled:opacity-50 disabled:cursor-not-allowed"
                     aria-describedby={status === 'error' ? 'error-message' : status === 'success' ? 'success-message' : undefined}
                 />
                 <button
@@ -143,19 +143,19 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
                     disabled={isLoading}
                     aria-label="Join Waitlist"
                     aria-busy={isLoading}
-                    className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 bg-[#015FFC] text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity duration-200 disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap"
+                    className="w-full sm:w-auto inline-flex items-center px-3 py-1 sm:px-4 sm:py-1.5 lg:px-6 lg:py-2 bg-[#015FFC] text-white text-xs sm:text-sm lg:text-base font-medium rounded-lg hover:opacity-90 transition-opacity duration-200 disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap flex-shrink-0"
                 >
                     {isLoading ? (
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                        <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-1 sm:mr-2"></div>
                     ) : null}
-                    <span>Join Waitlist</span>
+                    <span className="whitespace-nowrap">Join Waitlist</span>
                 </button>
             </div>
         );
     };
 
     return (
-        <div id="waitlist" className={`w-full max-w-md mx-auto ${className}`}>
+        <div id="waitlist" className={`w-full max-w-lg mx-auto ${className}`}>
             <form onSubmit={handleSubmit} className="space-y-4">
                 {renderForm()}
 
