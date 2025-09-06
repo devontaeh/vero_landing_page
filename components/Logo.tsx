@@ -41,10 +41,9 @@ const Logo: React.FC<LogoProps> = ({
 
     // Your actual SVG logo
     const LogoIcon = () => {
-        const logoSrc = process.env.NODE_ENV === 'production' ? '/vero_landing_page/logo.svg' : '/logo.svg';
         return (
             <img
-                src={logoSrc}
+                src="/logo.svg"
                 alt="Vero Logo"
                 width={config.iconSize}
                 height={config.iconSize}
