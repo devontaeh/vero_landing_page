@@ -143,7 +143,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
                     disabled={isLoading}
                     aria-label="Join Waitlist"
                     aria-busy={isLoading}
-                    className="w-full sm:w-auto inline-flex items-center px-3 py-1 sm:px-4 sm:py-1.5 lg:px-6 lg:py-2 bg-[#015FFC] text-white text-xs sm:text-sm lg:text-base font-medium rounded-lg hover:opacity-90 transition-opacity duration-200 disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap flex-shrink-0"
+                    className="w-full sm:w-auto inline-flex items-center justify-center sm:justify-start px-3 py-1 sm:px-4 sm:py-1.5 lg:px-6 lg:py-2 bg-[#015FFC] text-white text-sm sm:text-sm lg:text-base font-medium rounded-lg hover:opacity-90 transition-opacity duration-200 disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap flex-shrink-0"
                 >
                     {isLoading ? (
                         <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-1 sm:mr-2"></div>
