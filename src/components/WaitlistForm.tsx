@@ -61,7 +61,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ className = '', variant = '
             if (error) {
                 if (error.code === '23505') { // Unique constraint violation
                     setStatus('error');
-                    setErrorMessage('This email is already on our waitlist!');
+                    setErrorMessage('Looks like you\'re already on the list. Sit tight, we\'ll be in touch soon 🚀');
                 } else {
                     setStatus('error');
                     setErrorMessage('Something went wrong. Please try again.');
